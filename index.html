@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Management</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="sidebar">
+      <ul>
+        <li>
+          <i class="bi bi-graph-up"></i>
+          <a href="javascript:void(0)">Dashboard</a>
+        </li>
+        <li>
+          <i class="bi bi-wallet2"></i>
+          <a href="javascript:void(0)">Transações</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <div class="header">
+        <h2>Dashboard</h2>
+
+        <div class="dropdown">
+          <div class="profile-options dropdown-button">
+            <div class="description">
+              <h2>Alan Lucas da Cruz</h2>
+              <h4>alanlucascruz@gmail.com</h4>
+            </div>
+            <img src="assets/images/user.png" />
+          </div>
+
+          <div class="dropdown-content">
+            <a href="javascript:void(0)">Meu Perfil</a>
+            <a href="javascript:void(0)">Alterar Senha</a>
+            <a href="javascript:void(0)">Sair</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="totals">
+          <div class="row-md">
+            <div class="card">
+              <div class="icon">
+                <i class="bi bi-arrow-up-circle"></i>
+              </div>
+              <h2>Vendas (Outubro)</h2>
+              <h4>R$ 14.207,33</h4>
+            </div>
+
+            <div class="card">
+              <div class="icon">
+                <i class="bi bi-arrow-down-circle"></i>
+              </div>
+              <h2>Despesas (Outubro)</h2>
+              <h4>R$ 9.481,14</h4>
+            </div>
+          </div>
+
+          <div class="row-md">
+            <div class="card">
+              <div class="icon">
+                <i class="bi bi-piggy-bank"></i>
+              </div>
+              <h2>Lucro (Outubro)</h2>
+              <h4>R$ 4.726,19</h4>
+            </div>
+
+            <div class="card">
+              <div class="icon">
+                <i class="bi bi-wallet2"></i>
+              </div>
+              <h2>Saldo</h2>
+              <h4>R$ 57.382,09</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="charts">
+          <div class="chart-line">
+            <h2>Histórico</h2>
+            <h4>Últimos 12 meses</h4>
+            <div class="chart-container">
+              <canvas id="chartLine"></canvas>
+            </div>
+          </div>
+          <div class="chart-donut">
+            <h2>Vendas X Despesas</h2>
+            <h4>Mês atual</h4>
+            <div class="chart-container">
+              <canvas id="chartDonut"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="transactions">
+          <h2>Últimas Transações</h2>
+          <h4>Mês atual</h4>
+          <div class="table">
+            <div class="row">
+              <div class="col date">24/12/2022</div>
+
+              <div class="col value">
+                <div class="icon">
+                  <i class="bi bi-arrow-up-circle"></i>
+                </div>
+                R$ 1.349,97
+              </div>
+
+              <div class="col category">
+                <div class="badge">
+                  <div class="icon">
+                    <i class="bi bi-tag"></i>
+                  </div>
+                  Internet
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+
+    <!-- JS Libs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

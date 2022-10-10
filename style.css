@@ -1,0 +1,354 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: #ffffff;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: "Roboto", system-ui, -apple-system, sans-serif;
+  background-color: #090a13;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  padding: 24px;
+  padding-top: 100px;
+  width: 244px;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 8px 24px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: rgba(36, 36, 47, 0.7);
+}
+
+.sidebar ul li:hover a,
+.sidebar ul li:hover i {
+  color: #ffffff;
+}
+
+.sidebar ul li a {
+  color: #c1cccf;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.sidebar ul li i {
+  color: #c1cccf;
+  font-size: 24px;
+  margin-left: -8px;
+  margin-right: 16px;
+  transition: 0.25s;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+}
+
+.header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.header .profile-options {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header .profile-options .description {
+  text-align: right;
+}
+
+.header .profile-options .description h2 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.header .profile-options .description h4 {
+  color: #c1cccf;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.header .profile-options img {
+  margin-left: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.header .dropdown-button {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.header .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.header .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(59, 59, 71);
+  padding: 8px;
+  right: 0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.header .dropdown-content a {
+  color: #c1cccf;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  transition: 0.25s;
+}
+
+.header .dropdown-content a:hover {
+  color: #ffffff;
+}
+
+.header .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  flex: 1;
+  background-color: rgb(36, 36, 47);
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  padding: 24px;
+}
+
+.totals {
+  display: flex;
+}
+
+.totals .row-md {
+  display: flex;
+  flex: 1;
+}
+
+.totals .card {
+  flex: 1;
+  background-color: rgb(25, 26, 33);
+  margin: 16px;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.totals .card .icon {
+  width: max-content;
+  background: linear-gradient(to bottom, rgb(59, 59, 71), rgb(30, 30, 42));
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.totals .card .icon i {
+  font-size: 24px;
+}
+
+.totals .card h2 {
+  color: #c1cccf;
+  margin: 0;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.totals .card h4 {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 21px;
+}
+
+.charts {
+  display: flex;
+}
+
+.charts .chart-line {
+  display: flex;
+  flex-direction: column;
+  flex: 7;
+  background: rgb(25, 26, 33);
+  margin: 16px;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.charts .chart-line h2 {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.charts .chart-line h4 {
+  color: #c1cccf;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.charts .chart-line .chart-container {
+  position: relative;
+  height: 480px;
+}
+
+.charts .chart-donut {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background: rgb(25, 26, 33);
+  margin: 16px;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.charts .chart-donut .chart-container {
+  margin: 8px;
+}
+
+.charts .chart-donut h2 {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.charts .chart-donut h4 {
+  color: #c1cccf;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  background: rgb(25, 26, 33);
+  margin: 16px;
+  padding: 32px;
+  width: 50%;
+  border-radius: 32px;
+}
+
+.transactions h2 {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.transactions h4 {
+  color: #c1cccf;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.transactions .table .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactions .table .col {
+  display: flex;
+}
+
+.transactions .table .category .badge {
+  display: flex;
+}
+
+@media (max-width: 1920px) {
+  .charts .chart-line {
+    flex: 5;
+  }
+  .charts .chart-line .chart-container {
+    height: 440px;
+  }
+  .charts .chart-donut {
+    flex: 2;
+  }
+}
+
+@media (max-width: 1600px) {
+  .charts .chart-line .chart-container {
+    height: 320px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .totals {
+    flex-direction: column;
+  }
+  .charts .chart-line {
+    flex: 1;
+  }
+  .charts .chart-line .chart-container {
+    height: 350px;
+  }
+  .charts .chart-donut {
+    flex: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: absolute;
+    background-color: #090a13;
+    left: -244px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .charts {
+    flex-direction: column;
+  }
+
+  .totals .row-md {
+    flex-direction: column;
+  }
+
+  .header .profile-options .description {
+    display: none;
+  }
+}
