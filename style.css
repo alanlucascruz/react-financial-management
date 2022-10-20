@@ -79,7 +79,7 @@ a {
 }
 
 .header h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -341,18 +341,41 @@ a {
 
 @media (max-width: 600px) {
   body {
-    display: block;
+    flex-direction: column;
   }
 
-  .charts {
-    flex-direction: column;
+  .header {
+    padding: 16px 24px;
+  }
+
+  .header .profile-options .description {
+    display: none;
+  }
+
+  .content {
+    padding: 16px 8px;
+    border-radius: 0;
+  }
+
+  .totals .card {
+    margin: 8px;
   }
 
   .totals .row-md {
     flex-direction: column;
   }
 
-  .header .profile-options .description {
-    display: none;
+  .charts {
+    flex-direction: column;
+  }
+
+  .charts .chart-line,
+  .charts .chart-donut {
+    margin: 8px;
+  }
+
+  .charts .chart-line .chart-container {
+    margin: -12px;
+    height: 320px;
   }
 }
