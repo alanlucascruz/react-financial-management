@@ -22,7 +22,7 @@ a {
 }
 
 .sidebar {
-  padding: 24px;
+  padding: 16px;
   padding-top: 100px;
   width: 244px;
 }
@@ -35,11 +35,8 @@ a {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 8px 24px;
-  margin-bottom: 8px;
   border-radius: 8px;
   transition: 0.25s;
-  cursor: pointer;
 }
 
 .sidebar ul li:hover {
@@ -54,14 +51,14 @@ a {
 .sidebar ul li a {
   color: #c1cccf;
   font-weight: 500;
+  padding: 12px 24px;
   transition: 0.25s;
 }
 
 .sidebar ul li i {
   color: #c1cccf;
   font-size: 24px;
-  margin-left: -8px;
-  margin-right: 16px;
+  margin-right: 24px;
   transition: 0.25s;
 }
 
