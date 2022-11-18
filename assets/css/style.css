@@ -110,45 +110,6 @@ a {
   border-radius: 50%;
 }
 
-.header .dropdown-button {
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.header .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.header .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgb(59, 59, 71);
-  padding: 8px;
-  right: 0;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
-  z-index: 1;
-}
-
-.header .dropdown-content a {
-  color: #c1cccf;
-  padding: 8px;
-  text-decoration: none;
-  display: block;
-  transition: 0.25s;
-}
-
-.header .dropdown-content a:hover {
-  color: #ffffff;
-}
-
-.header .dropdown:hover .dropdown-content {
-  display: block;
-}
-
 .content {
   flex: 1;
   background-color: rgb(36, 36, 47);
@@ -264,7 +225,7 @@ a {
   background: rgb(25, 26, 33);
   margin: 16px;
   padding: 32px;
-  width: 50%;
+  max-width: 768px;
   border-radius: 32px;
 }
 
@@ -281,17 +242,61 @@ a {
   margin-bottom: 32px;
 }
 
-.transactions .table .row {
+.transactions .list .row {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #2c2e37;
 }
 
-.transactions .table .col {
+.transactions .list .col {
   display: flex;
+  align-items: center;
 }
 
-.transactions .table .category .badge {
-  display: flex;
+.transactions .list .icon {
+  margin-right: 8px;
+}
+
+.transactions .list .col .options {
+  padding: 16px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(59, 59, 71);
+  padding: 8px;
+  right: 0;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.dropdown-content i {
+  margin-right: 8px;
+}
+
+.dropdown-content a {
+  color: #c1cccf;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  transition: 0.25s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #ffffff;
 }
 
 @media (max-width: 1920px) {
@@ -316,12 +321,15 @@ a {
   .totals {
     flex-direction: column;
   }
+
   .charts .chart-line {
     flex: 1;
   }
+
   .charts .chart-line .chart-container {
     height: 350px;
   }
+
   .charts .chart-donut {
     flex: 1;
   }
@@ -374,5 +382,12 @@ a {
   .charts .chart-line .chart-container {
     margin: -12px;
     height: 280px;
+  }
+
+  .transactions .list .row {
+    flex-direction: column;
+  }
+
+  .transactions .list .col {
   }
 }
