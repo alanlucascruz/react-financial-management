@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav class="sidebar">
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+    <nav id="sidebar" class="sidebar">
       <ul>
         <li>
           <a href="index.html"> <i class="bi bi-graph-up"></i> Dashboard </a>
@@ -39,7 +41,16 @@
 
     <main class="main">
       <div class="header">
-        <h2>Dashboard</h2>
+        <div class="title-wrap">
+          <a
+            id="sidebar-button"
+            class="sidebar-button"
+            href="javascript:void(0)"
+          >
+            <i class="bi bi-list"></i>
+          </a>
+          <h2>Dashboard</h2>
+        </div>
 
         <div class="dropdown">
           <div class="profile-options dropdown-button">
@@ -51,9 +62,15 @@
           </div>
 
           <div class="dropdown-content">
-            <a href="javascript:void(0)">Meu Perfil</a>
-            <a href="javascript:void(0)">Alterar Senha</a>
-            <a href="javascript:void(0)">Sair</a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-person"></i> Meu Perfil
+            </a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-lock"></i> Alterar Senha
+            </a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-box-arrow-right"></i> Sair
+            </a>
           </div>
         </div>
       </div>
@@ -118,6 +135,7 @@
 
     <!-- JS Libs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/sidebar.js"></script>
   </body>
 </html>
